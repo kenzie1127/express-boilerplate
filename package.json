@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node .",
+    "start": "./node_modules/.bin/nodemon ./node_modules/.bin/babel-node .",
     "prepublish": "npm run build",
-    "test": "ava test",
+    "test": "mocha test/**/*.test.js",
     "build": "babel src -d dist -s inline"
   },
   "keywords": [],
@@ -18,11 +18,15 @@
     ]
   },
   "devDependencies": {
-    "@helio-training/babel-preset-helio": "^1.0.0",
-    "ava": "^0.19.1",
     "babel-cli": "^6.24.1",
+    "babel-eslint": "7",
     "babel-polyfill": "^6.22.0",
-    "babel-register": "^6.24.1"
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.24.1",
+    "code": "^5.1.2",
+    "eslint": "^4.14.0",
+    "mocha": "^4.1.0",
+    "nodemon": "^1.12.1"
   },
   "dependencies": {}
 }

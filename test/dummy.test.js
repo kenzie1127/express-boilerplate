@@ -1,5 +1,7 @@
-import Test from 'ava';
+describe(`initial`, () => {
 
-Test(`default`, t => {
-  t.truthy(true);
-});
+  it(`works`, () => {
+    expect(true).to.be.true()
+  })
+
+})
